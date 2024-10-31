@@ -1,0 +1,32 @@
+<h2>Creare Lucrare Nouă</h2>
+
+<form [formGroup]="workForm" (ngSubmit)="onSubmit()">
+  <label for="title">Titlu</label>
+  <input id="title" formControlName="title" type="text" placeholder="Introdu titlul lucrării" />
+  <div *ngIf="title?.invalid && (title?.dirty || title?.touched)" class="error-message">
+    <small *ngIf="title?.errors?.['required']">Titlul este obligatoriu.</small>
+    <small *ngIf="title?.errors?.['minlength']">Titlul trebuie să aibă cel puțin 3 caractere.</small>
+  </div>
+
+  <label for="description">Descriere</label>
+  <textarea id="description" formControlName="description" placeholder="Introdu descrierea lucrării"></textarea>
+  <div *ngIf="description?.invalid && (description?.dirty || description?.touched)" class="error-message">
+    <small *ngIf="description?.errors?.['maxlength']">Descrierea nu poate avea mai mult de 500 de caractere.</small>
+  </div>
+
+
+  <!-- Checkbox pentru vizibilitate -->
+  <label for="isVisible">Vizibil</label>
+  <input id="isVisible" formControlName="isVisible" type="checkbox" />
+
+  <!-- Selectorul pentru fișier (imagine) -->
+  <label for="image">Încărcați Imaginea Lucrării</label>
+  <input id="image" type="file" (change)="onFileSelected($event)" />
+  <div *ngIf="!selectedFile" class="error-message">
+    <small>Alegeți un fișier PNG sau JPEG sub 2 MB.</small>
+  </div>
+
+  <!-- Buton pentru trimitere -->
+  <button type="submit" [disabled]="workForm.invalid || !selectedFile">Creează Lucrarea</button>
+  <button type="button" (click)="onCancel()" class="cancel-button">Cancel</button>
+</form>

@@ -1,0 +1,101 @@
+/* Titlu și subtitlu galerie */
+.gallery-title {
+  text-align: center;
+  font-size: 2.2em;
+  color: #e53935;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.gallery-subtitle {
+  text-align: center;
+  font-size: 1.1em;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.gallery-subtitle a {
+  color: #337ab7;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.gallery-subtitle a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Containerul pentru carduri */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+/* Cardul artistului */
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  overflow: hidden;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Imaginea artistului */
+.artist-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* Conținutul cardului */
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  font-size: 1.4em;
+  margin: 12px 0;
+  color: #333;
+  font-weight: bold;
+}
+
+.artist-medium {
+  color: #777;
+  font-size: 0.9em;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+/* Stilul butonului "vezi portofoliu" */
+.portfolio-button {
+  background-color: #4285f4;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(66, 133, 244, 0.3);
+}
+
+.portfolio-button:hover {
+  background-color: #3367d6;
+  box-shadow: 0 6px 12px rgba(51, 103, 214, 0.4);
+}

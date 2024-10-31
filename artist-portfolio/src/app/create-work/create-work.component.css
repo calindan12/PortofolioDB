@@ -1,0 +1,132 @@
+/* Stiluri pentru titlul paginii */
+h2 {
+  text-align: center;
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Containerul formularului */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  background-color: #f8f9fa;
+}
+
+/* Stiluri pentru label-uri */
+label {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #555;
+  font-size: 1.1em;
+}
+
+/* Stiluri pentru câmpurile de input și textarea */
+input[type="text"],
+textarea,
+input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  outline: none;
+}
+
+input[type="text"]:focus,
+textarea:focus,
+input[type="file"]:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Stiluri pentru checkbox */
+input[type="checkbox"] {
+  margin-top: 10px;
+  transform: scale(1.2);
+  margin-right: 10px;
+}
+
+/* Aliniere checkbox cu eticheta */
+label[for="isVisible"],
+input[type="checkbox"] {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Stiluri pentru butonul de submit */
+button {
+  margin-top: 20px;
+  padding: 12px;
+  font-size: 1.1em;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+button:disabled {
+  background-color: #bbb;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+button:hover:not(:disabled) {
+  background-color: #0056b3;
+  transform: scale(1.03);
+}
+
+/* Mesaje de eroare */
+.error-message {
+  color: #dc3545;
+  font-size: 0.9em;
+  margin-top: 5px;
+  font-style: italic;
+}
+
+
+.cancel-button {
+  padding: 10px 20px;
+  font-size: 1em;
+  font-weight: bold;
+  color: #fff;
+  background-color: #dc3545; /* Roșu */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
+  margin-top: 20px;
+}
+
+.cancel-button:hover {
+  background-color: #c82333; /* Roșu mai închis */
+  transform: scale(1.03);
+}
+
+.cancel-button:active {
+  background-color: #a71d2a; /* Culoare mai închisă pentru efectul de click */
+  transform: scale(0.98);
+}
+
+.cancel-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(220, 53, 69, 0.4);
+}

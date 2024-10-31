@@ -1,0 +1,28 @@
+<app-nav></app-nav>
+
+<h2 class="page-title">Create a New Artist</h2>
+
+<form [formGroup]="artistForm" (ngSubmit)="onSubmit()">
+  <label for="firstName">First Name</label>
+  <input id="firstName" formControlName="firstName" type="text" />
+  <div class="error-message" *ngIf="artistForm.get('firstName')?.invalid && artistForm.get('firstName')?.touched">
+    First Name is required.
+  </div>
+
+  <label for="lastName">Last Name</label>
+  <input id="lastName" formControlName="lastName" type="text" />
+  <div class="error-message" *ngIf="artistForm.get('lastName')?.invalid && artistForm.get('lastName')?.touched">
+    Last Name is required.
+  </div>
+
+  <label for="linkUrl">Website URL</label>
+  <input id="linkUrl" formControlName="linkUrl" type="url" />
+  <div class="error-message" *ngIf="artistForm.get('linkUrl')?.invalid && artistForm.get('linkUrl')?.touched">
+    Website URL is required.
+  </div>
+
+  <label for="image">Upload Artist Image</label>
+  <input id="image" type="file" (change)="onFileSelected($event)" />
+
+  <button type="submit" [disabled]="artistForm.invalid">Create Artist</button>
+</form>

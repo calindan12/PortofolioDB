@@ -1,0 +1,24 @@
+<app-nav></app-nav>
+<h2>Works of Artist</h2>
+
+<!-- Buton de adăugare a unei noi lucrări -->
+
+<div class="card-container" *ngIf="works.length > 0; else noWorks">
+  <div class="card" *ngFor="let work of works">
+    <h3>{{ work.title }}</h3>
+    <p>{{ work.description }}</p>
+    <img [src]="work.imageUrl" alt="{{ work.title }}" class="work-image" />
+    <p *ngIf="work.clientLink">
+      Client: <a [href]="work.clientLink" target="_blank">{{ work.clientLink }}</a>
+    </p>
+    <button class="update" (click)="navigateToUpdateWork(work._id, artistId)">Update</button>
+    <button class="delete" (click)="deleteWork(work._id)">Delete Work</button>
+  </div>
+</div>
+
+<button class="add-new-work" (click)="navigateToCreateWork()">Add New Work</button>
+
+
+<ng-template #noWorks>
+  <p class="no-works-message">No works available for this artist.</p>
+</ng-template>

@@ -1,0 +1,23 @@
+<app-nav></app-nav>
+
+<div class="work-details">
+    <div class="work-image" (click)="openModal()">
+      <img [src]="work.imageUrl" alt="{{ work.title }}" />
+    </div>
+  
+    <div class="work-info">
+      <h2>{{ work.title }}</h2>
+      <p>{{ work.description }}</p>
+      <p>{{ artist.linkUrl }}</p>
+
+    </div>
+  </div>
+  
+  <!-- Modal pentru afișarea imaginii mari -->
+  <div class="modal" *ngIf="isModalOpen" (click)="closeModal()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <span class="close" (click)="closeModal()">&times;</span>
+      <img [src]="work.imageUrl" alt="{{ work.title }}" class="modal-image" />
+    </div>
+  </div>
+  

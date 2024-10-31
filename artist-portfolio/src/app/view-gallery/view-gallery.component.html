@@ -1,0 +1,19 @@
+<app-nav></app-nav>
+
+<h2 class="gallery-title">Artisti Plastici</h2>
+<p class="gallery-subtitle">expozanti pe <a href="http://www.promo-art.ro" target="_blank">www.Promo-Art.ro</a></p>
+
+<div class="card-container" *ngIf="artists.length > 0; else noArtists">
+  <div class="card" *ngFor="let artist of artists" (click)="viewArtistGallery(artist._id)">
+    <img [src]="artist.imageUrl" alt="{{ artist.firstName }} {{ artist.lastName }}" class="artist-image" />
+    <div class="card-content">
+      <h3>{{ artist.firstName }} {{ artist.lastName }}</h3>
+      <p class="artist-medium">{{ artist.specialization }}</p>
+      <button class="portfolio-button">vezi portofoliu &gt;</button>
+    </div>
+  </div>
+</div>
+
+<ng-template #noArtists>
+  <p>No artists available.</p>
+</ng-template>

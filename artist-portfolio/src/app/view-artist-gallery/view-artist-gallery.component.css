@@ -1,0 +1,106 @@
+/* Titlu și informații despre artist */
+.page-title {
+  text-align: center;
+  font-size: 2.5em;
+  color: #1976d2;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.artist-info {
+  text-align: center;
+  font-size: 1.2em;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* Containerul pentru cardurile lucrărilor */
+.work-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+/* Cardul pentru fiecare lucrare */
+.work-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 280px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.work-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Imaginea lucrării */
+.work-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* Detalii despre lucrare */
+.work-details {
+  padding: 15px;
+}
+
+.work-title {
+  font-size: 1.2em;
+  color: #1976d2;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.artist-name {
+  color: #666;
+  font-size: 1em;
+  font-style: italic;
+}
+
+.work-description {
+  font-size: 0.9em;
+  color: #333;
+  margin: 10px 0;
+}
+
+.work-code {
+  font-size: 0.85em;
+  color: #777;
+}
+
+/* Stilul butonului "Vezi Detalii" */
+.view-work-button {
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  font-weight: bold;
+}
+
+.view-work-button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+/* Mesajul de eroare în cazul în care nu sunt lucrări */
+.no-works-message {
+  text-align: center;
+  font-size: 1.2em;
+  color: #777;
+  margin-top: 20px;
+}

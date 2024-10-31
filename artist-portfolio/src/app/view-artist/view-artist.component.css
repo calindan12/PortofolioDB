@@ -1,0 +1,135 @@
+/* Titlul paginii */
+h2 {
+  text-align: center;
+  font-size: 2em;
+  color: #1976d2;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+/* Butonul de adăugare a unei noi lucrări */
+.add-new-work {
+  display: block;
+  width: 60%; /* Lățime mai mare pentru un aspect stretch */
+  max-width: 400px;
+  padding: 12px;
+  font-size: 1em;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 20px auto; /* Centrează butonul */
+  text-align: center;
+  transition: background-color 0.3s, transform 0.2s;
+  font-weight: bold;
+}
+
+.add-new-work:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+/* Container pentru carduri */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Cardul fiecărei lucrări */
+.card {
+  width: 280px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Titlul lucrării */
+.card h3 {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Descrierea lucrării */
+.card p {
+  font-size: 1em;
+  color: #555;
+  margin: 10px 0;
+}
+
+/* Imaginea lucrării */
+.work-image {
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 10px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Linkul clientului */
+.card a {
+  color: #1e88e5;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.card a:hover {
+  color: #1565c0;
+  text-decoration: underline;
+}
+
+/* Stilizarea pentru butoane de pe carduri */
+button {
+  padding: 10px 15px;
+  font-size: 0.9em;
+  margin-top: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  font-weight: bold;
+}
+
+/* Buton de actualizare */
+button.update {
+  background-color: #1e88e5;
+  color: white;
+}
+
+button.update:hover {
+  background-color: #1565c0;
+}
+
+/* Buton de ștergere */
+button.delete {
+  background-color: #e53935;
+  color: white;
+}
+
+button.delete:hover {
+  background-color: #d32f2f;
+}
+
+/* Mesaj pentru cazul când nu există lucrări */
+.no-works-message {
+  text-align: center;
+  font-size: 1.1em;
+  color: #777;
+  margin-top: 30px;
+}

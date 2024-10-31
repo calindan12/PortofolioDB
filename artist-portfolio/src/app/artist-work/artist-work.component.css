@@ -1,0 +1,124 @@
+/* Container pentru detaliile lucrării */
+.work-details {
+    display: flex;
+    gap: 20px;
+    max-width: 800px;
+    margin: 40px auto;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Imaginea lucrării */
+  .work-image img {
+    width: 100%;
+    max-width: 600px;
+    max-height: 500px;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .work-image img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Informațiile despre lucrare */
+  .work-info {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+  }
+  
+  .work-info h2 {
+    margin: 0 0 15px;
+    font-size: 1.8em;
+    color: #1976d2;
+  }
+  
+  .work-info p {
+    margin: 10px 0;
+    color: #555;
+    font-size: 1em;
+    line-height: 1.6;
+  }
+  
+  .work-info h3 {
+    color: #4CAF50;
+    font-size: 1.5em;
+    margin-top: 15px;
+  }
+  
+  .buy-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .buy-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+  }
+  
+  /* Stilizarea pentru modal */
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  /* Conținutul modal */
+  .modal-content {
+    position: relative;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 90%;
+    max-height: 90%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Imaginea în modal */
+  .modal-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Butonul de închidere */
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5em;
+    color: #333;
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .close:hover {
+    color: #e53935;
+  }
+  

@@ -1,0 +1,33 @@
+<h2>Update Work</h2>
+
+<form [formGroup]="workForm" (ngSubmit)="onSubmit()">
+  <label for="title">Title</label>
+  <input id="title" formControlName="title" type="text" />
+  <div *ngIf="title?.invalid && (title?.dirty || title?.touched)" class="error-message">
+    <small *ngIf="title?.errors?.['required']">Title is required.</small>
+    <small *ngIf="title?.errors?.['minlength']">Title must be at least 3 characters long.</small>
+  </div>
+
+  <label for="description">Description</label>
+  <textarea id="description" formControlName="description"></textarea>
+  <div *ngIf="description?.invalid && (description?.dirty || description?.touched)" class="error-message">
+    <small *ngIf="description?.errors?.['maxlength']">Description cannot exceed 500 characters.</small>
+  </div>
+
+  <label for="image">Upload Image</label>
+  <input id="image" type="file" (change)="onFileSelected($event)" />
+  <div *ngIf="selectedFile === null" class="error-message">
+    <small>Only PNG, JPEG files under 2 MB are allowed.</small>
+  </div>
+
+
+
+  <label for="isVisible">Visible</label>
+  <input id="isVisible" formControlName="isVisible" type="checkbox" />
+
+  <!-- Butonul Update Work -->
+  <button type="submit" [disabled]="workForm.invalid">Update Work</button>
+
+  <!-- Butonul Cancel -->
+  <button type="button" (click)="onCancel()" class="cancel-button">Cancel</button>
+</form>

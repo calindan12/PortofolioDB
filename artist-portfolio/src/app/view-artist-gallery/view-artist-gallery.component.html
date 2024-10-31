@@ -1,0 +1,20 @@
+<app-nav></app-nav>
+
+<h2 class="page-title">Lucrari</h2>
+<p class="artist-info">Pictura | Grafica | DTP | Pirogravura<br>Artist: <strong>{{ artist.firstName }} {{ artist.lastName }}</strong></p>
+
+<div class="work-card-container" *ngIf="works.length > 0; else noWorks">
+  <div class="work-card" *ngFor="let work of works">
+    <img [src]="work.imageUrl" alt="{{ work.title }}" class="work-image" />
+    <div class="work-details">
+      <h3 class="work-title">"{{ work.title }}"</h3>
+      <p class="artist-name">Artist: {{ artist.firstName }} {{ artist.lastName }}</p>
+      <!-- Buton pentru vizualizarea detaliilor lucrării -->
+      <button (click)="viewWork(artist._id, work._id)" class="view-work-button">Vezi Detalii</button>
+    </div>
+  </div>
+</div>
+
+<ng-template #noWorks>
+  <p>Nu există lucrări disponibile pentru acest artist.</p>
+</ng-template>
