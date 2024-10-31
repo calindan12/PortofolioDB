@@ -1,0 +1,1 @@
+This web application is designed for an administrator to manage digital artists' portfolios. The admin has full control to register new artists, add and manage their works, and oversee all portfolio content for a professional showcase.
